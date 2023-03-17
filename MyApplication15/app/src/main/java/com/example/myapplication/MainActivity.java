@@ -1,0 +1,38 @@
+package com.example.myapplication;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+    boolean issDrake=true;
+    public void change(View view)
+    {
+
+        ImageView iv=findViewById(R.id.imageView);
+        if(issDrake)
+        {
+            iv.setImageResource(R.drawable.wp2508837);
+            issDrake=false;
+        }
+        else
+        {
+            iv.setImageResource(R.drawable.img);
+            issDrake=true;
+
+        }
+
+    }
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+}
